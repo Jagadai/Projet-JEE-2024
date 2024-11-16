@@ -5,8 +5,8 @@
   <title>JSP - Hello World</title>
 </head>
 <body>
-<h1><%= "Hello World!" %></h1>
+<h1><%= "Bienvenu sur CYUEcole" %></h1>
 <br/>
-<a href="hello-servlet">Hello Servlet, test modif baat</a>
+<a href="hello-servlet">Site CyuEcole</a>
 </body>
 </html>

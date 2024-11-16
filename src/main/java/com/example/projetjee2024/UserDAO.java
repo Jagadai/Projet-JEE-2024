@@ -1,11 +1,11 @@
-package Login;
+package com.example.projetjee2024;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-@WebServlet("/UserDAO")
+
 public class UserDAO {
     private String dbUrl;
     private String dbUsername;
@@ -50,6 +50,6 @@ public class UserDAO {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return null;
+        return -1;
     }
 }

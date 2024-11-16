@@ -1,4 +1,4 @@
-package com.example.projetjee2024;
+package com.example.projetjee2024.Servlet;
 
 import java.io.*;
 import jakarta.servlet.http.*;

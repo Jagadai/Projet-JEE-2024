@@ -1,12 +1,13 @@
-package Login;
+package com.example.projetjee2024.Servlet;
 
 import java.io.IOException;
 
+import com.example.projetjee2024.UserDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
 
-@WebServlet("/VerifLogin")
+@WebServlet(name = "VerifLogin", value = "/VerifLogin")
 public class VerifLogin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -35,7 +36,7 @@ public class VerifLogin extends HttpServlet {
         String message = "Wrong username or password";
         String page = "/WEB-INF/Login.jsp";
         String permission = "None";
-        String id = "-1";
+        double id = -1;
 
 	//Checking credentials
         if (studentDAO.validateUser(username, password)) {
