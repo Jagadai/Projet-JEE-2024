@@ -2,7 +2,7 @@ package com.example.projetjee2024.Servlet;
 
 import java.io.IOException;
 
-import com.example.projetjee2024.UserDAO;
+import com.example.projetjee2024.classes.UserDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;

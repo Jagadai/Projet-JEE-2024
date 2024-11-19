@@ -1,4 +1,4 @@
-package com.example.projetjee2024;
+package com.example.projetjee2024.classes;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
