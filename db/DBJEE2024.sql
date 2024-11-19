@@ -62,7 +62,7 @@ CREATE TABLE `student` (
   `adress` varchar(60) DEFAULT NULL,
   `login` varchar(30) DEFAULT NULL,
   `password` varchar(30) DEFAULT NULL,
-  `degree` int DEFAULT NULL,
+  `degree` int DEFAULT NULL,adding a fields
   `class` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
