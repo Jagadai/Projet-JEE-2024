@@ -18,5 +18,12 @@
 			<br>           
 			<input type="submit" />
 		</form>
+
+		<% if(request.getAttribute("message")!=null){ %>
+			<%=request.getAttribute("message")%>
+	<%}%>
+
+
+
 	</body>
 </html>

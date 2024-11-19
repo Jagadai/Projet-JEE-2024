@@ -7,6 +7,6 @@
 <body>
 <h1><%= "Bienvenu sur CYUEcole" %></h1>
 <br/>
-<a href="hello-servlet">Site CyuEcole</a>
+<a href="Login.jsp">Site CyuEcole</a>
 </body>
 </html>
