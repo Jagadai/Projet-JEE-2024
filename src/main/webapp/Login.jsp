@@ -17,7 +17,13 @@
 			<br>
 			<br>           
 			<input type="submit" />
-			<br> <p> ${ reponse }</p>
 		</form>
+
+		<% if(request.getAttribute("message")!=null){ %>
+			<%=request.getAttribute("message")%>
+	<%}%>
+
+
+
 	</body>
 </html>

@@ -13,7 +13,9 @@
 <body>
 
 <div class="top_banner"><?-- Bannière du haut -->
-    <form action="/RedirectionServlet" method="get"><img src="ressources/img_CYTECH_logo.png"></form>
+    <a href="RedirectionServlet?url=Accueil.jsp" >
+        <img src="resources/IMAGE/img_CYTECH_logo.png"/>
+    </a>
 <div class="onglets">
     <table>
         <tr>

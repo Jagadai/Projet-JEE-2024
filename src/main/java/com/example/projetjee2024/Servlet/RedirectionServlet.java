@@ -22,8 +22,7 @@ public class RedirectionServlet extends HttpServlet {
 
 
         if(URL==null || URL==""){
-            request.setAttribute("reponse", "Connexion fail. Wrong password or login");
-            response.sendRedirect("http://login.jsp");
+;            response.sendRedirect("http://login.jsp");
         }
         else{
             response.sendRedirect(URL);
