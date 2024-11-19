@@ -14,22 +14,22 @@
 
 <div class="top_banner"><?-- Bannière du haut -->
     <a href="RedirectionServlet?url=Accueil.jsp" >
-        <img src="resources/IMAGE/img_CYTECH_logo.png"/>
+        <img src="./"/>
     </a>
 <div class="onglets">
     <table>
         <tr>
             <td>
-                Gerer ses cours
+                <a href="RedirectionServlet?url=CourseGestion.jsp" >Gerer ses cours</a>
             </td>
             <td>
-                Emplois du temps
+                <a href="RedirectionServlet?url=TimeTable.jsp" >Emplois du temps</a>
             </td>
             <td>
-                Notes
+                <a href="RedirectionServlet?url=Notes.jsp" >Notes</a>
             </td>
             <td>
-                Parameters
+                <a href="RedirectionServlet?url=Parameters.jsp" >Parameters</a>
             </td>
         </tr>
     </table>
@@ -41,9 +41,9 @@
 
 
 <div class="bottom_banner"><?-- Bannière du bas -->
-FAQ
-    copiright+nomdevs
-    lien vers cytech
+    <a href="RedirectionServlet?url=Faq.jsp" >FAQ</a>
+    Copiright...
+        <a href="RedirectionServlet?url=https://cytech.cyu.fr" >lien vers cytech</a>
 </div>
 </body>
 </html>
