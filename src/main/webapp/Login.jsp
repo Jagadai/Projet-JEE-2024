@@ -16,12 +16,12 @@
 			<input type="password" name="password" id="password" />
 			<br>
 			<br>
-			<input type="radio" id="student" name="status" value="HTML">
+			<input type="radio" id="student" name="status" value="student">
 			<label for="student">Student</label><br>
-			<input type="radio" id="professor" name="status" value="CSS">
+			<input type="radio" id="professor" name="status" value="professor">
 			<label for="professor">Professor</label><br>
-			<input type="radio" id="admin" name="status" value="JavaScript">
-			<label for="admin">Admin</label>
+			<input type="radio" id="administrator" name="status" value="administrator">
+			<label for="administrator">Admin</label><br>
 			<input type="submit" />
 		</form>
 
