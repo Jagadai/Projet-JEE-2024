@@ -15,7 +15,13 @@
 			<label for="password">Password : </label>
 			<input type="password" name="password" id="password" />
 			<br>
-			<br>           
+			<br>
+			<input type="radio" id="student" name="status" value="HTML">
+			<label for="student">Student</label><br>
+			<input type="radio" id="professor" name="status" value="CSS">
+			<label for="professor">Professor</label><br>
+			<input type="radio" id="admin" name="status" value="JavaScript">
+			<label for="admin">Admin</label>
 			<input type="submit" />
 		</form>
 

@@ -53,5 +53,10 @@
         <artifactId>maven-war-plugin</artifactId>
         <version>3.3.2</version>
       </plugin>                </plugins>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+      </resource>
+    </resources>
   </build>
 </project>
