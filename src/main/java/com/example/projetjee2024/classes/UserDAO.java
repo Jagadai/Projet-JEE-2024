@@ -59,7 +59,7 @@ public class UserDAO {
             throw new RuntimeException(e);
         }
 
-        //Connection to the database
+        // Connection to the database
         try (Connection conn = DriverManager.getConnection(dbUrl, dbUsername, dbPassword);
              PreparedStatement stmt = conn.prepareStatement(query);
              //Execution of the query
