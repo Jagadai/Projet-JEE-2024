@@ -18,7 +18,6 @@ public class CreateCourse extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try{
-
             String name = request.getParameter("name");
             String teacher = request.getParameter("teacher");
             String matiere = request.getParameter("matiere");
@@ -51,6 +50,11 @@ public class CreateCourse extends HttpServlet {
                     " (`name`,`teacherName`,`matiere`,`duree`) " +
                     "VALUES (\""+name +"\", \"" + teacher +"\", \"" + matiere+"\", \""+duree +"\")");
             statementInsert.executeUpdate(query.toString());
+
+            /**
+             * Redirection vers la page d'accueil
+             */
+            response.sendRedirect("/Projet_JEE_2024_war/Accueil.jsp");
         }
         catch (Exception e){
             /**

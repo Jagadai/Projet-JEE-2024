@@ -31,6 +31,12 @@
             <td>
                 <a href="RedirectionServlet?url=Parameters.jsp" >Parameters</a>
             </td>
+            <td>
+                <a href="RedirectionServlet?url=Login.jsp" >Déconnexion </a>
+            </td>
+            <td>
+                <a href="RedirectionServlet?url=CreateCourse.jsp" >Crée un cours </a>
+            </td>
         </tr>
     </table>
 </div>
