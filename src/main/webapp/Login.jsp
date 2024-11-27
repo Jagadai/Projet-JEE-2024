@@ -7,7 +7,7 @@
 		<title>Login JEE</title>
 	</head>
 	<body>
-		<form method="post" action="VerifLogin">
+		<br method="post" action="VerifLogin">
 			<label for="username">Username : </label>
 			<input type="text" name="username" id="username" />
 			<br>

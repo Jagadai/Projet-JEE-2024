@@ -22,7 +22,7 @@ public class RedirectionServlet extends HttpServlet {
 
 
         if(URL==null || URL==""){
-            response.sendRedirect("http://login.jsp");
+;            response.sendRedirect("http://login.jsp");
         }
         else{
             response.sendRedirect(URL);
