@@ -11,7 +11,8 @@
         <title>Create Course</title>
     </head>
     <body>
-        <form method="get" action="CreateCourseServlet">
+        <form method="get" action="CreateCourseServlet" >
+
             <br> Name course <input type='text' name='name' required="True"/> </br>
             <br> Teacher <input type='text' name='teacher' required="True"/></br>
             <br> Matière <input type='text' name='matiere' required="True"/></br>

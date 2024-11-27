@@ -50,7 +50,6 @@ public class CreateCourse extends HttpServlet {
             query.append("INSERT INTO "+ matiere +"_"+ teacher +
                     " (`name`,`teacherName`,`matiere`,`duree`) " +
                     "VALUES (\""+name +"\", \"" + teacher +"\", \"" + matiere+"\", \""+duree +"\")");
-
             statementInsert.executeUpdate(query.toString());
         }
         catch (Exception e){
