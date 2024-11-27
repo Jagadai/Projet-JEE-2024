@@ -51,7 +51,7 @@ public class VerifLogin extends HttpServlet {
                 permission = "Admin";
             }
             page = "/Accueil.jsp";
-            id = 2;//!!!changer l'id une fois que j'ai fait la fonction pour le recuperer
+            id = 2;//!!changer l'id une fois que j'ai fait la fonction pour le recuperer
             //id = loginDAO.getId(username, password);
         }
 	
