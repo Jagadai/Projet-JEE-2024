@@ -17,10 +17,15 @@ public class UserDAO {
         this.dbPassword = dbPassword;
     }
 
-    public boolean validateUser(String username, String password) {
+    public boolean validateUser(String username, String password,String status) {
     	//Écriture de la requête
-        String query = "SELECT * FROM users WHERE username = ? AND password = ?"; 
+        String query = "SELECT * FROM "+ status + " WHERE login = ? AND password = ?";
         //Connexion à la base de donnée
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
         try (Connection conn = DriverManager.getConnection(dbUrl, dbUsername, dbPassword);
         	//Préparation de la requête
              PreparedStatement stmt = conn.prepareStatement(query)) {

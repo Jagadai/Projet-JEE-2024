@@ -5,7 +5,7 @@
   <title>JSP - Hello World</title>
 </head>
 <body>
-<h1><%= "Bienvenu sur CYUEcole" %></h1>
+<h1><%= "Bienvenue sur CYUEcole" %></h1>
 <br/>
 <a href="Login.jsp">Site CyuEcole</a>
 </body>
