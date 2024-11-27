@@ -51,7 +51,7 @@ public class VerifLogin extends HttpServlet {
                 permission = "Admin";
             }
             page = "/Accueil.jsp";
-            id = loginDAO.getId(username, password);
+            //id = loginDAO.getId(username, password);
         }
 	
 	//Adding attributes to the redirect
