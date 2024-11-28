@@ -11,7 +11,7 @@
     <title>Create Account</title>
 </head>
 <body>
-    <br>
+    <br method="post" action="">
     <label >Name : </label>
     <input type="text" name="name" id="name" />
     <br>
@@ -50,5 +50,8 @@
     <br>
     <label>Password : </label>
     <input type="password" name="password" id="password" />
+
+    <input type="submit" />
+    </form>
 </body>
 </html>
