@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Gestion des Paramètres</title>
+    <title>Gestion des Parametres</title>
 
 </head>
 <body>
@@ -42,6 +42,8 @@
             <th>nom</th>
             <th>Adresse</th>
             <th>Promotion</th>
+            <th>Mail</th>
+            <th>Password</th>
             <th>Modifier</th>
         </tr>
         </thead>
@@ -53,6 +55,9 @@
                 String nom = rs.getString("name");
                 String adresse = rs.getString("adress");
                 String promotion = rs.getString("degree");
+                String mail = rs.getString("mail");
+                //int phone = rs.getInt("phone");
+                String passwordUser = rs.getString("password");
         %>
         <tr>
             <input type="hidden" name="id_<%= id %>" value="<%= id %>"/>
@@ -60,6 +65,8 @@
             <td><input type="text" name="prenom_<%= id %>" value="<%= nom %>"/></td>
             <td><input type="text" name="adresse_<%= id %>" value="<%= adresse %>"/></td>
             <td><input type="text" name="promotion_<%= id %>" value="<%= promotion %>"/></td>
+            <td><input type="text" name="mail_<%= id %>" value="<%= mail %>"/></td>
+            <td><input type="text" name="password_<%= id %>" value="<%= passwordUser %>"/></td>
         </tr>
         <%
             }

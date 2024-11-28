@@ -12,11 +12,18 @@ import java.sql.PreparedStatement;
 
 @WebServlet("/MiseAJourServlet")
 public class MiseAJourServlet extends HttpServlet {
+
+    private int id = 0;
+    private String status = null;
+    private String name = null;
+    private String lastName = null;
+    private String address = null;
+    private String degree = null;
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String url = "jdbc:mysql://localhost:3306/votre_base";
-        String user = "votre_utilisateur";
-        String password = "votre_mot_de_passe";
+        String url = "jdbc:mysql://localhost:3306/projetjee";
+        String user = "root";
+        String password = "cytech0001";
 
         Connection conn = null;
 
@@ -25,7 +32,7 @@ public class MiseAJourServlet extends HttpServlet {
             Class.forName("com.mysql.cj.jdbc.Driver");
             conn = DriverManager.getConnection(url, user, password);
 
-            String updateQuery = "UPDATE etudiants SET nom=?, prenom=?, adresse=?, notes=?, filiere=?, promotion=? WHERE id=?";
+            String updateQuery = "UPDATE student SET name=?, lastName=?, adress=?, degree=?, mail=?, password=? WHERE id=?";
             PreparedStatement pstmt = conn.prepareStatement(updateQuery);
 
             // Boucle pour traiter chaque ligne du formulaire
@@ -35,14 +42,22 @@ public class MiseAJourServlet extends HttpServlet {
                     pstmt.setString(1, request.getParameter("nom_" + id));
                     pstmt.setString(2, request.getParameter("prenom_" + id));
                     pstmt.setString(3, request.getParameter("adresse_" + id));
-                    pstmt.setString(4, request.getParameter("notes_" + id));
-                    pstmt.setString(5, request.getParameter("filiere_" + id));
-                    pstmt.setString(6, request.getParameter("promotion_" + id));
+                    pstmt.setString(4, request.getParameter("promotion_" + id));
+                    pstmt.setString(5, request.getParameter("mail_" + id));
+                    //pstmt.setInt(6, request.getParameter(id);
+                    pstmt.setString(6, request.getParameter("password_" + id));
                     pstmt.setInt(7, id);
+
+                    this.id = id;
+                    this.name = request.getParameter("prenom_" + id);
+                    this.lastName = request.getParameter("nom_" + id);
+                    this.address = request.getParameter("adresse_" + id);
+                    this.degree = request.getParameter("promotion_" + id);
+
                     pstmt.executeUpdate();
                 }
             }
-            response.sendRedirect("AffichageEtModification.jsp");
+            response.sendRedirect("/Projet_JEE_2024_war/Accueil.jsp");
         } catch (Exception e) {
             throw new ServletException(e);
         } finally {

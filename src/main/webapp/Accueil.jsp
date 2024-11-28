@@ -1,4 +1,5 @@
-<%--
+<%@ page import="com.example.projetjee2024.Servlet.AccueilServlet" %>
+<%@ page import="com.example.projetjee2024.classes.StudentEntity" %><%--
   Created by IntelliJ IDEA.
   User: cytech
   Date: 15/11/2024
@@ -7,9 +8,9 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
-    <title></title>
-</head>
+    <head>
+        <title></title>
+    </head>
 <body>
 
 <div class="top_banner"><?-- Bannière du haut -->
@@ -20,7 +21,7 @@
     <table>
         <tr>
             <td>
-                <a href="RedirectionServlet?url=CourseGestion.jsp" >Gerer ses cours</a>
+                 <a href="RedirectionServlet?url=CourseGestion.jsp">Gerer ses cours</a>
             </td>
             <td>
                 <a href="RedirectionServlet?url=TimeTable.jsp" >Emplois du temps</a>
@@ -28,7 +29,7 @@
             <td>
                 <a href="RedirectionServlet?url=Notes.jsp" >Notes</a>
             </td>
-            <td>
+            <td >
                 <a href="RedirectionServlet?url=Parameters.jsp" >Parameters</a>
             </td>
             <td>
@@ -37,11 +38,13 @@
             <td>
                 <a href="RedirectionServlet?url=CreateCourse.jsp" >Crée un cours </a>
             </td>
+            <td>
+                <a href="RedirectionServlet?url=Settings.jsp" >Paramètre </a>
+            </td>
         </tr>
     </table>
 </div>
 </div>
-
 
 <div class="central_container"></div><?-- La page -->
 
