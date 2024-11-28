@@ -24,6 +24,7 @@
 			<label for="administrator">Admin</label><br>
 			<input type="submit" />
 		</form>
+		<br> <a href="CreateAccount.jsp"> Create Account</a>
 
 		<% if(request.getAttribute("message")!=null){ %>
 			<%=request.getAttribute("message")%>
