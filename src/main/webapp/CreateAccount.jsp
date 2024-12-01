@@ -11,7 +11,7 @@
     <title>Create Account</title>
 </head>
 <body>
-    <br method="post" action="">
+    <form method="get" action="CreateAccount">
     <label >Name : </label>
     <input type="text" name="name" id="name" />
     <br>
@@ -21,7 +21,7 @@
     <br>
     <br>
     <label>Date of birth : </label>
-    <input type="text" name="DateOfBirth" id="DateOfBirth" />
+    <input type="date" name="DateOfBirth" id="DateOfBirth" />
     <br>
     <br>
     <label >Mail : </label>
