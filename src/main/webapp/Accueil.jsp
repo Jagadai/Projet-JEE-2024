@@ -118,7 +118,7 @@
     <link href="./CSS/JEEprojet.css" rel="stylesheet">
     <div class="header-title">
         <a href="RedirectionServlet?url=Accueil.jsp" >
-        <img src="./"/>
+        <img src="./IMAGE/img_CYTECH_logo.png" width="200" height="100"/>
     </a></div>
 
 </div>
@@ -133,6 +133,7 @@
         if ( permission == "student" && permission == "teacher" ) {
     %>
     <button class="btn btn-primary" onclick="window.location.href = 'RedirectionServlet?url=CourseGestion.jsp';">Gerer ses cours</button>
+
     <%}%>
 
     <%
@@ -145,6 +146,7 @@
 
     <button class="btn btn-success" onclick="window.location.href = 'RedirectionServlet?url=Settings.jsp';">Paramètre</button>
     <button class="btn btn-danger" onclick="window.location.href = 'RedirectionServlet?url=Login.jsp';">Déconnexion</button>
+    <button class="btn btn-primary" onclick="window.location.href = 'EnvoiMailServlet';">Envoi Mail Exemple</button>
 </div>
 
 <br>
@@ -168,7 +170,6 @@
     <span>    Site realise par Baptiste MOISSERON | Emilien MASSI | Baptiste RUELLAN | Lucas BEDUE</span>
     <br><a href="https://github.com/Jagadai/Projet-JEE-2024" target="_blank">GitHub</a>
     <a href="RedirectionServlet?url=https://cytech.cyu.fr" >CY Tech</a>
-    <a href="RedirectionServlet?url=Faq.jsp" >FAQ</a>
 </div>
 </body>
 </html>
