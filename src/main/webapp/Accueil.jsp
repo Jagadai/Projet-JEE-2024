@@ -130,7 +130,7 @@
 <br>
 <div class="header-buttons">
     <%
-        if ( permission == "student" && permission == "teacher" ) {
+        if ( permission == "student" || permission == "teacher" ) {
     %>
     <button class="btn btn-primary" onclick="window.location.href = 'RedirectionServlet?url=CourseGestion.jsp';">Gerer ses cours</button>
 
