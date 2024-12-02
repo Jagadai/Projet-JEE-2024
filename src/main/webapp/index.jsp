@@ -121,7 +121,7 @@
 <a href="Login.jsp">Site CyuEcole</a>
 <div class="footer">
   <span>© 2024 Mon Projet JEE</span>
-  <span>    Site réalisé par Baptiste MOISSERON | Emilien MASSI | Baptiste RUELLAN | Lucas BÉDUÉ</span>
+  <span>    Site realise par Baptiste MOISSERON | Emilien MASSI | Baptiste RUELLAN | Lucas BEDUE</span>
   <br><a href="https://github.com/Jagadai/Projet-JEE-2024" target="_blank">GitHub</a>
   <a href="RedirectionServlet?url=https://cytech.cyu.fr" >CY Tech</a>
   <a href="RedirectionServlet?url=Faq.jsp" >FAQ</a>
