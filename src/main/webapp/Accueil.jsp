@@ -27,7 +27,7 @@
 
 <div class="top_banner"><?-- Bannière du haut -->
     <a href="RedirectionServlet?url=Accueil.jsp" >
-        <img src="./"/>
+        <img src="./IMAGE/img_CYTECH_logo.png" heigth="200px" width="200px"/>
     </a>
 <div class="onglets">
     <table>
@@ -62,9 +62,9 @@
 
 
 <div class="bottom_banner"><?-- Bannière du bas -->
-    <a href="RedirectionServlet?url=Faq.jsp" >FAQ</a>
-    Copiright...
-        <a href="RedirectionServlet?url=https://cytech.cyu.fr" >lien vers cytech</a>
+    <a href="RedirectionServlet?url=Faq.jsp" >FAQ</a><br>
+    Site réalisé par Baptiste MOISSERON | Emilien MASSI | Baptiste RUELLAN | Lucas BÉDUÉ <br>
+    <a href="RedirectionServlet?url=https://cytech.cyu.fr" >Lien vers Cy-tech.fr</a>
 </div>
 </body>
 </html>
