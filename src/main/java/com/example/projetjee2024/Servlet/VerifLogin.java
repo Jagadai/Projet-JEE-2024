@@ -36,29 +36,29 @@ public class VerifLogin extends HttpServlet {
         String message = "Wrong username or password";
         String page = "/Login.jsp";
         String permission = "None";
-        double id = -1;
+        Integer id = -1;
 
 	//Checking credentials
         if (loginDAO.validateUser(username, password,status)) {
             if(status.equals("student")){
-                permission = "Élève";
+                permission = "student";
                 message = "Student page";
-            } else if (status.equals("professor")) {
-                message = "Professor page";
-                permission = "Professeur";
+            } else if (status.equals("teacher")) {
+                message = "Teacher page";
+                permission = "teacher";
             }else if (status.equals("administrator")) {
                 message = "Admin page";
-                permission = "Admin";
+                permission = "administrator";
             }
             page = "/Accueil.jsp";
-            id = 2;//!!!changer l'id une fois que j'ai fait la fonction pour le recuperer
-            //id = loginDAO.getId(username, password);
+            id = loginDAO.getUserId(username, password,status);//!!!changer l'id une fois que j'ai fait la fonction pour le recupere)
         }
 	
-	//Adding attributes to the redirect
+	//Adding attributes to the session
+        HttpSession session = request.getSession();
+        session.setAttribute("id", id);
+        session.setAttribute("permission", permission);
         request.setAttribute("message", message);
-        request.setAttribute("permission", permission);
-        request.setAttribute("id", id);
         this.getServletContext().getRequestDispatcher(page).forward(request, response);
     }
 

@@ -13,6 +13,18 @@
     </head>
 <body>
 
+<br>
+<%
+    Integer id= (Integer) session.getAttribute("id");
+    String permission = (String) session.getAttribute("permission");
+%>
+<div class="central_container">
+    <h1>Test session</h1>
+    <p>Votre ID : <%= id != null ? id : "Non défini" %></p>
+    <p>Votre statut : <%= permission != null ? permission : "Non défini" %></p>
+</div>
+<br>
+
 <div class="top_banner"><?-- Bannière du haut -->
     <a href="RedirectionServlet?url=Accueil.jsp" >
         <img src="./"/>

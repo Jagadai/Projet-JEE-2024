@@ -17,6 +17,8 @@
 <h1>Gestion des Parametres</h1>
 
 <%
+    Integer sessionId= (Integer) session.getAttribute("id");
+    String sessionPermission = (String) session.getAttribute("permission");
     String url = "jdbc:mysql://localhost:3306/projetjee";
     String user = "root";
     String password = "cytech0001";
@@ -30,7 +32,7 @@
         stmt = conn.createStatement();
 
 
-        String query = "SELECT * FROM student";
+        String query = "SELECT * FROM "+ sessionPermission +" WHERE id = "+sessionId;
         rs = stmt.executeQuery(query);
 
 %>
@@ -54,19 +56,31 @@
                 String prenom = rs.getString("lastName");
                 String nom = rs.getString("name");
                 String adresse = rs.getString("adress");
-                String promotion = rs.getString("degree");
                 String mail = rs.getString("mail");
-                //int phone = rs.getInt("phone");
+                int phone = rs.getInt("phone");
                 String passwordUser = rs.getString("password");
+                //
         %>
         <tr>
             <input type="hidden" name="id_<%= id %>" value="<%= id %>"/>
             <td><input type="text" name="nom_<%= id %>" value="<%= prenom %>"/></td>
             <td><input type="text" name="prenom_<%= id %>" value="<%= nom %>"/></td>
             <td><input type="text" name="adresse_<%= id %>" value="<%= adresse %>"/></td>
-            <td><input type="text" name="promotion_<%= id %>" value="<%= promotion %>"/></td>
             <td><input type="text" name="mail_<%= id %>" value="<%= mail %>"/></td>
             <td><input type="text" name="password_<%= id %>" value="<%= passwordUser %>"/></td>
+            <%
+                if (sessionPermission.equals("student")) {
+                    String promotion = rs.getString("degree");
+            %>
+            <td><input type="text" name="promotion_<%= id %>" value="<%= promotion %>"/></td>
+            <%
+            } else if (sessionPermission.equals("teacher")) {
+                String subject = rs.getString("subject");
+            %>
+            <td><input type="text" name="subject_<%= id %>" value="<%= subject %>"/></td>
+            <%
+                }
+            %>
         </tr>
         <%
             }

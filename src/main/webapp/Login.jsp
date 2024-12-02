@@ -18,8 +18,8 @@
 			<br>
 			<input type="radio" id="student" name="status" value="student">
 			<label for="student">Student</label><br>
-			<input type="radio" id="professor" name="status" value="professor">
-			<label for="professor">Professor</label><br>
+			<input type="radio" id="teacher" name="status" value="teacher">
+			<label for="teacher">Teacher</label><br>
 			<input type="radio" id="administrator" name="status" value="administrator">
 			<label for="administrator">Admin</label><br>
 			<input type="submit" />
