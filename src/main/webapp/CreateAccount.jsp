@@ -40,17 +40,13 @@
     <input type="text" name="login" id="login" />
     <br>
     <br>
-    <label >Degree : </label>
-    <input type="number" name="degree" id="degree" />
-    <br>
-    <br>
-    <label >Class : </label>
-    <input type="text" name="class" id="class" />
-    <br>
-    <br>
     <label>Password : </label>
     <input type="password" name="password" id="password" />
-
+        <br>
+        <input type="radio" id="student" name="status" value="student">
+        <label for="student">Student</label><br>
+        <input type="radio" id="teacher" name="status" value="teacher">
+        <label for="teacher">Teacher</label><br>
     <input type="submit" />
     </form>
 </body>

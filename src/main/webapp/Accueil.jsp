@@ -41,9 +41,6 @@
             <td>
                 <a href="RedirectionServlet?url=Notes.jsp" >Notes</a>
             </td>
-            <td >
-                <a href="RedirectionServlet?url=Parameters.jsp" >Parameters</a>
-            </td>
             <td>
                 <a href="RedirectionServlet?url=Login.jsp" >Déconnexion </a>
             </td>
@@ -59,6 +56,9 @@
 </div>
 
 <div class="central_container"></div><?-- La page -->
+<% if(request.getAttribute("message")!=null){ %>
+<%=request.getAttribute("message")%>
+<%}%>
 
 
 <div class="bottom_banner"><?-- Bannière du bas -->

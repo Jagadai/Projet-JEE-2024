@@ -30,11 +30,10 @@ public class CreateAccount extends HttpServlet {
             String address = request.getParameter("address");
             String login = request.getParameter("login");
             String password = request.getParameter("password");
-            String degree = request.getParameter("degree");
-            String classe = request.getParameter("classe");
+
+            String stat = request.getParameter("status");
 
             int phonNum = Integer.parseInt(phone);
-            int deg = Integer.parseInt(degree);
 
 
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -45,14 +44,15 @@ public class CreateAccount extends HttpServlet {
             Statement statement = connection.createStatement();
             id ++;
 
-            PreparedStatement statementInsert = connection.prepareStatement("SELECT * FROM student");
+            PreparedStatement statementInsert = connection.prepareStatement("SELECT" + stat +" FROM student");
 
             StringBuilder query = new StringBuilder();
-            query.append("INSERT INTO student"+
-                    " (`id`,`name`,`lastName`,`dateOfBirth`,`mail`,`phone`,`adress`,`login`,`password`,`degree`,`class`) " +
-                    "VALUES (\""+ id +"\", \""+name +"\", \"" + lastName +"\", \"" + dateOfBirth+"\", \""+mail + "\", \"" + phonNum +"\", \"" + address+"\", \"" + login +"\", \"" + password+"\", \"" + deg +"\", \"" + classe+"\")");
+            query.append("INSERT INTO "+ stat +
+                    " (`id`,`name`,`lastName`,`dateOfBirth`,`mail`,`phone`,`adress`,`login`,`password`) " +
+                    "VALUES (\""+ id +"\", \""+name +"\", \"" + lastName +"\", \"" + dateOfBirth+"\", \""+mail + "\", \"" + phonNum +"\", \"" + address+"\", \"" + login +"\", \"" + password+"\")");
             statementInsert.executeUpdate(query.toString());
 
+            request.setAttribute("message", "Le compte a été créé avec succès");
             /**
              * Redirection vers la page de connexion
              */
