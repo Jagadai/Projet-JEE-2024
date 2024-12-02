@@ -69,7 +69,12 @@ public class MiseAJourServlet extends HttpServlet {
                     pstmt.executeUpdate();
                 }
             }
-            response.sendRedirect("/Projet_JEE_2024_war/Accueil.jsp");
+            request.setAttribute("message", "Les modifications ont été enregistrés");
+
+            /**
+             * Redirection vers la page d'accueil
+             */
+            this.getServletContext().getRequestDispatcher("/Accueil.jsp").forward(request, response);
         } catch (Exception e) {
             throw new ServletException(e);
         } finally {

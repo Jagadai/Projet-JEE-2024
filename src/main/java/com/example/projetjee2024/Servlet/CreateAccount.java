@@ -14,7 +14,6 @@ import java.sql.Statement;
 
 @WebServlet(name = "CreateAccount", value = "/CreateAccount")
 public class CreateAccount extends HttpServlet {
-    int id = 3;
 
     public void init() throws ServletException {
 
@@ -42,21 +41,21 @@ public class CreateAccount extends HttpServlet {
              */
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/projetjee", "root", "cytech0001");
             Statement statement = connection.createStatement();
-            id ++;
 
             PreparedStatement statementInsert = connection.prepareStatement("SELECT" + stat +" FROM student");
 
             StringBuilder query = new StringBuilder();
             query.append("INSERT INTO "+ stat +
-                    " (`id`,`name`,`lastName`,`dateOfBirth`,`mail`,`phone`,`adress`,`login`,`password`) " +
-                    "VALUES (\""+ id +"\", \""+name +"\", \"" + lastName +"\", \"" + dateOfBirth+"\", \""+mail + "\", \"" + phonNum +"\", \"" + address+"\", \"" + login +"\", \"" + password+"\")");
+                    " (`name`,`lastName`,`dateOfBirth`,`mail`,`phone`,`adress`,`login`,`password`) " +
+                    "VALUES (\""+name +"\", \"" + lastName +"\", \"" + dateOfBirth+"\", \""+mail + "\", \"" + phonNum +"\", \"" + address+"\", \"" + login +"\", \"" + password+"\")");
             statementInsert.executeUpdate(query.toString());
 
             request.setAttribute("message", "Le compte a été créé avec succès");
+
             /**
              * Redirection vers la page de connexion
              */
-            response.sendRedirect("/Projet_JEE_2024_war/Login.jsp");
+            this.getServletContext().getRequestDispatcher("/Accueil.jsp").forward(request, response);
         }
         catch (Exception e){
             /**

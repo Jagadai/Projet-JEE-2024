@@ -51,10 +51,12 @@ public class CreateCourse extends HttpServlet {
                     "VALUES (\""+name +"\", \"" + teacher +"\", \"" + matiere+"\", \""+duree +"\")");
             statementInsert.executeUpdate(query.toString());
 
+            request.setAttribute("message", "Le cours a été créé avec succès");
+
             /**
              * Redirection vers la page d'accueil
              */
-            response.sendRedirect("/Projet_JEE_2024_war/Accueil.jsp");
+            this.getServletContext().getRequestDispatcher("/Accueil.jsp").forward(request, response);
         }
         catch (Exception e){
             /**
