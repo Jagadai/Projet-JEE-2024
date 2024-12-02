@@ -1,8 +1,13 @@
 package com.example.projetjee2024.Servlet;
 
 import java.io.*;
+import java.util.Properties;
+
+
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
+
+import javax.mail.Session;
 
 @WebServlet(name = "RedirectionServlet", value = "/RedirectionServlet")
 public class RedirectionServlet extends HttpServlet {
@@ -25,6 +30,8 @@ public class RedirectionServlet extends HttpServlet {
 ;            response.sendRedirect("http://login.jsp");
         }
         else{
+
+
             response.sendRedirect(URL);
 
         }
