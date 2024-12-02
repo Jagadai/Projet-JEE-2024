@@ -152,7 +152,9 @@
 <br>
 
 <div class="central_container">
-    <h1>Test session</h1>
+    <h1><% if(request.getAttribute("message")!=null){ %>
+        <%=request.getAttribute("message")%>
+        <%}%></h1>
     <p>Votre ID : <%= id != null ? id : "Non défini" %></p>
     <p>Votre statut : <%= permission != null ? permission : "Non défini" %></p>
 </div>
@@ -160,9 +162,7 @@
 
 
 <div class="central_container"></div><?-- La page -->
-<% if(request.getAttribute("message")!=null){ %>
-<%=request.getAttribute("message")%>
-<%}%>
+
 
 
 <div class="footer">
