@@ -59,7 +59,6 @@
                 String mail = rs.getString("mail");
                 int phone = rs.getInt("phone");
                 String passwordUser = rs.getString("password");
-                //
         %>
         <tr>
             <input type="hidden" name="id_<%= id %>" value="<%= id %>"/>
@@ -74,12 +73,7 @@
             %>
             <td><input type="text" name="promotion_<%= id %>" value="<%= promotion %>"/></td>
             <%
-            } else if (sessionPermission.equals("teacher")) {
-                String subject = rs.getString("subject");
-            %>
-            <td><input type="text" name="subject_<%= id %>" value="<%= subject %>"/></td>
-            <%
-                }
+            }
             %>
         </tr>
         <%
