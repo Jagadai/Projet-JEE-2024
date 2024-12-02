@@ -147,7 +147,6 @@
 			<span>    Site realise par Baptiste MOISSERON | Emilien MASSI | Baptiste RUELLAN | Lucas BEDUE</span>
 			<br><a href="https://github.com/Jagadai/Projet-JEE-2024" target="_blank">GitHub</a>
 			<a href="RedirectionServlet?url=https://cytech.cyu.fr" >CY Tech</a>
-			<a href="RedirectionServlet?url=Faq.jsp" >FAQ</a>
 		</div>
 
 	</body>
