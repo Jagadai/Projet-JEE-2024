@@ -43,10 +43,15 @@
             <th>Prenom</th>
             <th>nom</th>
             <th>Adresse</th>
-            <th>Promotion</th>
             <th>Mail</th>
             <th>Password</th>
-            <th>Modifier</th>
+            <%
+                if (sessionPermission.equals("student")) {
+            %>
+                <th>Promotion</th>
+            <%
+                }
+            %>
         </tr>
         </thead>
         <tbody>
